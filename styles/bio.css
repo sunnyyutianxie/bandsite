@@ -1,0 +1,363 @@
+@font-face {
+  font-family: "Avenir__Regular";
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir__Demi";
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir__Bold";
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #323232;
+  padding-top: 2rem;
+  font-family: "Avenir__Regular";
+}
+.header__left {
+  text-align: center;
+}
+.header__left a {
+  font-size: 2.8rem;
+}
+.header__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer {
+  padding-left: 2rem;
+  font-family: "Avenir__Demi";
+  background-color: #323232;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.footer__title {
+  font-size: 300%;
+  padding-bottom: 2rem;
+}
+.footer__media {
+  display: flex;
+  flex-direction: row;
+}
+.footer__media img {
+  padding-right: 4rem;
+  height: 2.5rem;
+  padding-bottom: 1rem;
+}
+.footer__bandsite {
+  font-size: 270%;
+  font-family: "Avenir__Regular";
+}
+.footer__copyright {
+  font-family: "Avenir__Regular";
+  padding-top: 1.5rem;
+  font-size: 130%;
+}
+
+.hero {
+  position: relative;
+}
+.hero__img {
+  display: inline-block;
+  width: 100%;
+  max-height: 23rem;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__word {
+  position: absolute;
+  top: 40%;
+  left: 4%;
+  color: white;
+  font-size: 7.2vw;
+  font-family: "Avenir__Demi";
+}
+
+.musician {
+  padding: 2.5rem 1.3rem;
+  color: #323232;
+  font-family: "Avenir__Demi";
+}
+.musician__title {
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+.musician img {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+.musician__quote {
+  padding-top: 1.5rem;
+  font-size: 4.3vw;
+  line-height: 160%;
+}
+.musician__quoteauthor {
+  padding-top: 1rem;
+  font-size: 4.3vw;
+}
+.musician__paragraphtitle {
+  font-family: "Avenir__Regular";
+  padding-top: 3.3rem;
+  font-size: 4.3vw;
+  font-weight: bolder;
+}
+.musician__paragraph {
+  font-family: "Avenir__Regular";
+  padding-top: 0.3rem;
+  font-size: 4.1vw;
+  line-height: 138%;
+}
+
+.gallery {
+  background-color: #fafafa;
+}
+.gallery__title {
+  color: #323232;
+  font-family: "Avenir__Demi";
+  font-size: 7.5vw;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 0.7rem;
+}
+.gallery__items {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.3rem;
+  padding-bottom: 1rem;
+}
+.gallery__item {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0rem 0.7rem;
+  font-size: 5rem;
+  border-radius: 0.3rem;
+}
+
+@media all and (max-width: 767px) {
+  .header__right {
+    padding-top: 1rem;
+  }
+  .header__right a {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .currentpage {
+    padding-bottom: 2rem;
+    border-bottom: 5px solid white;
+  }
+  .musician img {
+    max-height: 18.5rem;
+  }
+  .footer__blockchild p {
+    font-family: "Avenir__Regular";
+    font-size: 150%;
+    padding-bottom: 1.5rem;
+  }
+}
+@media all and (min-width: 768px) {
+  a {
+    font-size: 1rem;
+  }
+  .header {
+    font-family: "Avenir__Regular";
+    display: flex;
+  }
+  .header__left {
+    margin-left: 3rem;
+    margin-right: 2rem;
+  }
+  .header__left a {
+    font-size: 1.5rem;
+  }
+  .header__right {
+    padding-top: 0.3rem;
+    padding-bottom: 1.8rem;
+  }
+  .header__right > a {
+    margin-left: 3rem;
+  }
+  .currentpage {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 1.8rem;
+    font-family: "Avenir__Demi";
+  }
+  .hero__img {
+    max-height: 50rem;
+  }
+  .hero__word {
+    font-size: 7.8vw;
+  }
+  .musician {
+    padding: 0 6rem;
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+    position: relative;
+  }
+  .musician__title {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+  .musician__paragraph {
+    display: flex;
+    width: 100%;
+  }
+  .musician__quote {
+    font-size: 2.8vw;
+    line-height: 130%;
+  }
+  .musician__quoteauthor {
+    font-size: 2vw;
+  }
+  .musician__paragraphtitle {
+    font-family: "Avenir__Demi";
+    font-size: 3vw;
+    font-weight: bolder;
+  }
+  .musician__paragraph {
+    font-size: 2vw;
+    gap: 4rem;
+  }
+  .gallery__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+  }
+  .gallery__items .gallery__item {
+    width: 30%;
+    margin: 3vw 0;
+  }
+  .gallery__title {
+    padding-left: 5%;
+    font-size: 220%;
+  }
+  .footer__title {
+    font-size: 225%;
+  }
+  .footer__media {
+    margin-left: 3rem;
+    margin-top: 0.8rem;
+  }
+  .footer__media img {
+    padding-right: 1.5rem;
+    height: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .footer__blockchild {
+    padding-right: 2rem;
+  }
+  .footer__blockchild h2 {
+    font-size: 100%;
+    padding-bottom: 1rem;
+  }
+  .footer__blockchild p {
+    font-family: "Avenir__Regular";
+    font-size: 100%;
+    padding-bottom: 1rem;
+  }
+  .footer__bandsite {
+    position: absolute;
+    top: 3.8rem;
+    right: 3rem;
+    font-size: 150%;
+  }
+  .footer__topbar {
+    display: flex;
+  }
+  .footer__block {
+    display: flex;
+  }
+  .footer__copyright {
+    font-size: 100%;
+  }
+}
+@media all and (min-width: 1279px) {
+  .header__left {
+    margin-left: 9rem;
+  }
+  .hero__word {
+    font-size: 5vw;
+    padding-left: 5rem;
+  }
+  .musician {
+    padding: 0 15rem;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+  .musician__title {
+    left: 9rem;
+  }
+  .musician__quote {
+    font-size: 1.8vw;
+    padding-right: 8rem;
+  }
+  .musician__quoteauthor {
+    font-size: 1.25vw;
+  }
+  .musician__paragraphtitle {
+    font-size: 1.8vw;
+  }
+  .musician__paragraph {
+    font-size: 1.1vw;
+    line-height: 160%;
+  }
+  .gallery__items {
+    margin: 0 5.5rem;
+  }
+  .gallery__items .gallery__item {
+    width: 30%;
+    margin: 1vw 0;
+  }
+  .gallery__title {
+    padding-left: 7.5rem;
+  }
+  .footer {
+    padding-left: 7.5rem;
+  }
+  .footer__title {
+    font-size: 250%;
+  }
+  .footer__media {
+    margin-left: 4rem;
+  }
+  .footer__media img {
+    padding-right: 2.5rem;
+  }
+  .footer__block {
+    padding-right: 10vw;
+  }
+  .footer__blockchild {
+    padding-right: 4.5rem;
+  }
+  .footer__bandsite {
+    right: 10rem;
+  }
+}/*# sourceMappingURL=bio.css.map */
