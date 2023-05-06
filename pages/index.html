@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/bio.css" />
+    <link rel="stylesheet" href="../styles/bio.css" />
     <title>Bandsite</title>
   </head>
   <body>
@@ -15,7 +15,7 @@
       </div>
       <div class="header__right">
         <a class="currentpage" href="#">Biography</a>
-        <a href="#">Shows</a>
+        <a href="./shows.html">Shows</a>
       </div>
     </div>
 
@@ -23,13 +23,13 @@
     <div class="hero">
       <div class="hero__word">The Bees Knees</div>
 
-      <img class="hero__img" src="./assets/Images/hero-bio.jpg" alt="" />
+      <img class="hero__img" src="../assets/Images/hero-bio.jpg" alt="" />
     </div>
 
     <!-- About the Musicians Section -->
     <div class="musician">
       <div class="musician__title">About the Musicians</div>
-      <img src="./assets/Images/band.jpg" alt="" />
+      <img src="../assets/Images/band.jpg" alt="" />
       <div class="musician__quote">
         “We push each other to be the best. It’s not uncommon for one of us to
         say ‘this needs to be better, back to the drawing board’”
@@ -69,52 +69,133 @@
       <div class="gallery__items">
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-1.jpg"
+          src="../assets/Images/Photo-gallery-1.jpg"
           alt=""
           class="gallery__item"
         />
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-2.jpg"
+          src="../assets/Images/Photo-gallery-2.jpg"
           alt=""
         />
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-3.jpg"
+          src="../assets/Images/Photo-gallery-3.jpg"
           alt=""
         />
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-4.jpg"
+          src="../assets/Images/Photo-gallery-4.jpg"
           alt=""
         />
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-5.jpg"
+          src="../assets/Images/Photo-gallery-5.jpg"
           alt=""
         />
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-6.jpg"
+          src="../assets/Images/Photo-gallery-6.jpg"
           alt=""
         />
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-7.jpg"
+          src="../assets/Images/Photo-gallery-7.jpg"
           alt=""
         />
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-8.jpg"
+          src="../assets/Images/Photo-gallery-8.jpg"
           alt=""
         />
         <img
           class="gallery__item"
-          src="./assets/Images/Photo-gallery-9.jpg"
+          src="../assets/Images/Photo-gallery-9.jpg"
           alt=""
         />
       </div>
     </section>
+
+    <!-- Conversation section -->
+    <h2 class="conversation__title">Join the Conversation</h2>
+    <div class="conversation">
+      <img src="../assets/Images/Mohan-muruge.jpg" alt="" />
+      <form class="form conversation__right">
+        <!-- name input -->
+        <label for="name" class="conversation__right__label">NAME</label>
+        <input
+          type="text"
+          class="conversation__right__input"
+          name="name"
+          id="name"
+          placeholder="  Enter your name"
+        />
+        <!-- comment input -->
+        <label for="comment" class="conversation__right__label">COMMENT</label>
+        <textarea
+          class="conversation__right__textarea"
+          name="comment"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="  Add a new comment"
+        ></textarea>
+        <!-- submit button -->
+        <button class="conversation__right__btn">COMMENT</button>
+      </form>
+    </div>
+
+    <!-- Comment section -->
+    <div class="comment">
+      <div class="comment__sole">
+        <div class="comment__sole__img">
+          <img src="../assets/Images/comment profile pic.png" alt="" />
+        </div>
+        <div class="comment__sole__rightblock">
+          <div class="comment__sole__rightblock__top">
+            <div class="comment__sole__rightblock__top-name">Connor Walton</div>
+            <div class="comment__sole__rightblock__top-date">02/17/2021</div>
+          </div>
+          <div class="comment__sole__rightblock__words">
+            This is art. This is inexplicable magic expressed in the purest way,
+            everything that makes up this majestic work deserves reverence. Let
+            us appreciate this for what it is and what it contains.
+          </div>
+        </div>
+      </div>
+      <div class="comment__sole">
+        <div class="comment__sole__img">
+          <img src="../assets/Images/comment profile pic.png" alt="" />
+        </div>
+        <div class="comment__sole__rightblock">
+          <div class="comment__sole__rightblock__top">
+            <div class="comment__sole__rightblock__top-name">Emilie Beach</div>
+            <div class="comment__sole__rightblock__top-date">01/09/2021</div>
+          </div>
+          <div class="comment__sole__rightblock__words">
+            I feel blessed to have seen them in person. What a show! They were
+            just perfection. If there was one day of my life I could relive,
+            this would be it. What an incredible day.
+          </div>
+        </div>
+      </div>
+      <div class="comment__sole">
+        <div class="comment__sole__img">
+          <img src="../assets/Images/comment profile pic.png" alt="" />
+        </div>
+        <div class="comment__sole__rightblock">
+          <div class="comment__sole__rightblock__top">
+            <div class="comment__sole__rightblock__top-name">Miles Acosta</div>
+            <div class="comment__sole__rightblock__top-date">12/20/2020</div>
+          </div>
+          <div class="comment__sole__rightblock__words">
+            I can't stop listening. Every time I hear one of their songs - the
+            vocals - it gives me goosebumps. Shivers straight down my spine.
+            What a beautiful expression of creativity. Can't get enough.
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer section -->
     <div class="footer">
@@ -122,13 +203,13 @@
         <div class="footer__title">Get in Touch</div>
         <div class="footer__media">
           <a href="https://instagram.com"
-            ><img alt="instagram" src="./assets/Icons/SVG/Icon-instagram.svg"
+            ><img alt="instagram" src="../assets/Icons/SVG/Icon-instagram.svg"
           /></a>
           <a href="https://facebook.com"
-            ><img alt="facebook" src="./assets/Icons/SVG/Icon-facebook.svg"
+            ><img alt="facebook" src="../assets/Icons/SVG/Icon-facebook.svg"
           /></a>
           <a href="https://twitter.com"
-            ><img alt="twitter" src="./assets/Icons/SVG/Icon-twitter.svg"
+            ><img alt="twitter" src="../assets/Icons/SVG/Icon-twitter.svg"
           /></a>
         </div>
       </div>
@@ -144,7 +225,6 @@
           </p>
           <p>info@thebeesknees.com</p>
         </div>
-        <!-- delete -->
         <div class="footer__blockchild">
           <h2>
             Pearl Gregg <br />
@@ -173,5 +253,6 @@
         Copyright The Bees Knees © 2021 All Rights Reserved
       </div>
     </div>
+    <script src="../scripts/index-page.js"></script>
   </body>
 </html>

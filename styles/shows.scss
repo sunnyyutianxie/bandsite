@@ -1,0 +1,508 @@
+$pc-media: 1279px;
+$tab-media: 768px;
+$tabs-media: 767px;
+
+@mixin phone-width() {
+  @media all and (max-width: $tabs-media) {
+    @content;
+  }
+}
+
+@mixin pc-width() {
+  @media all and (min-width: $pc-media) {
+    @content;
+  }
+}
+
+@mixin pad-width() {
+  @media all and (min-width: $tab-media) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: "Avenir__Regular";
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir__Demi";
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir__Bold";
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+//style start from below-----------------------------------------
+
+body {
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.header {
+  background-color: #323232;
+  padding-top: 2rem;
+
+  font-family: "Avenir__Regular";
+
+  &__left {
+    text-align: center;
+
+    & a {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.hero {
+  position: relative;
+
+  &__img {
+    display: inline-block;
+    width: 100%;
+    max-height: 35rem;
+    overflow: hidden;
+    object-fit: cover;
+    filter: brightness(65%);
+  }
+
+  &__title {
+    position: absolute;
+    top: 13%;
+    left: 4%;
+    color: white;
+    font-size: 1.8rem;
+    font-family: "Avenir__Demi";
+    z-index: 999;
+  }
+
+  &__word {
+    position: absolute;
+    top: 28%;
+    left: 4%;
+    color: white;
+    font-size: 3rem;
+    font-family: "Avenir__Demi";
+    padding-right: 10rem;
+    z-index: 999;
+  }
+
+  &__music {
+    position: absolute;
+    width: 90%;
+    top: 55%;
+    left: 4%;
+  }
+}
+
+.shows {
+  &__title {
+    margin: 4rem 2rem;
+    font-size: 3.5rem;
+    font-family: "Avenir__Demi";
+  }
+
+  &-label {
+    font-family: "Avenir__Demi";
+    color: #afafaf;
+  }
+
+  &__ticket__info {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #afafaf;
+    margin-bottom: 1.5rem;
+
+    &-date {
+      margin-left: 2rem;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+
+      & div {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        font-family: "Avenir__Demi";
+      }
+    }
+
+    &-venue {
+      margin-left: 2rem;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+
+      & div {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        font-family: "Avenir__Regular";
+      }
+    }
+
+    &-location {
+      margin-left: 2rem;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+
+      & div {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        font-family: "Avenir__Regular";
+      }
+    }
+
+    &-buy {
+      margin-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      & button {
+        width: 100%;
+        background-color: #323232;
+        color: white;
+        height: 5rem;
+        font-family: "Avenir__Demi";
+        font-size: 2rem;
+        border-radius: 5px;
+        border: none;
+      }
+    }
+  }
+}
+
+.footer {
+  padding-left: 2rem;
+  font-family: "Avenir__Demi";
+  background-color: #323232;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+
+  &__title {
+    font-size: 300%;
+    padding-bottom: 2rem;
+  }
+
+  &__media {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__media img {
+    padding-right: 4rem;
+    height: 2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  &__bandsite {
+    font-size: 270%;
+    font-family: "Avenir__Regular";
+  }
+
+  &__copyright {
+    font-family: "Avenir__Regular";
+    padding-top: 1.5rem;
+    font-size: 130%;
+  }
+}
+
+// -----------------------------------------------------------------------
+// phone-width media display----------------------------------------------
+@include phone-width {
+  .header {
+    // padding-bottom: 2rem;
+
+    &__right {
+      padding-top: 1rem;
+      & a {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+    }
+  }
+
+  .currentpage {
+    padding-bottom: 2rem;
+    border-bottom: 5px solid white;
+  }
+
+  .footer__blockchild p {
+    font-family: "Avenir__Regular";
+    font-size: 150%;
+    padding-bottom: 1.5rem;
+  }
+}
+
+// pad-width media display--------------------------------
+@include pad-width {
+  a {
+    font-size: 1rem;
+  }
+
+  .header {
+    font-family: "Avenir__Regular";
+    display: flex;
+
+    &__left {
+      margin-left: 3rem;
+      margin-right: 2rem;
+
+      & a {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__right {
+      padding-top: 0.3rem;
+      padding-bottom: 1.8rem;
+
+      & > a {
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  .currentpage {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 1.8rem;
+    font-family: "Avenir__Demi";
+  }
+
+  .hero {
+    &__img {
+      max-height: 35rem;
+    }
+
+    &__title {
+      top: 9%;
+      left: 6%;
+      font-size: 1.7rem;
+    }
+
+    &__word {
+      top: 16%;
+      left: 6%;
+
+      font-size: 4rem;
+      font-family: "Avenir__Demi";
+      padding-right: 12rem;
+
+      z-index: 999;
+    }
+
+    &__music {
+      width: 60%;
+      top: 50%;
+      left: 6%;
+      height: 9rem;
+    }
+  }
+
+  .shows {
+    &__title {
+      margin-left: 3rem;
+      font-size: 2.3rem;
+    }
+
+    &__ticket__info {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-date {
+        font-size: 1rem;
+
+        & div {
+          font-size: 1rem;
+        }
+      }
+
+      &-venue {
+        font-size: 1rem;
+        & div {
+          font-size: 1rem;
+        }
+      }
+
+      &-location {
+        font-size: 1rem;
+
+        & div {
+          font-size: 1rem;
+        }
+      }
+
+      &-buy {
+        padding-top: 1.4rem;
+        & button {
+          width: 9.8rem;
+          height: 2.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .hide-label {
+    display: none;
+
+    &-btn {
+      padding-top: 0.2rem;
+    }
+  }
+
+  .footer {
+    &__title {
+      font-size: 225%;
+    }
+
+    &__media {
+      margin-left: 3rem;
+      margin-top: 0.8rem;
+    }
+
+    &__media img {
+      padding-right: 1.5rem;
+      height: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    &__blockchild {
+      padding-right: 2rem;
+
+      & h2 {
+        font-size: 100%;
+        padding-bottom: 1rem;
+      }
+
+      & p {
+        font-family: "Avenir__Regular";
+        font-size: 100%;
+        padding-bottom: 1rem;
+      }
+    }
+
+    &__bandsite {
+      position: absolute;
+      top: 3.8rem;
+      right: 3rem;
+      font-size: 150%;
+    }
+
+    &__topbar {
+      display: flex;
+    }
+
+    &__block {
+      display: flex;
+    }
+
+    &__copyright {
+      font-size: 100%;
+    }
+  }
+}
+
+// pc-width media display--------------------------------
+
+@include pc-width {
+  .header {
+    &__left {
+      margin-left: 9rem;
+    }
+  }
+
+  .hero {
+    &__title {
+      top: 25%;
+      left: 0%;
+      padding-left: 9rem;
+    }
+
+    &__word {
+      top: 35%;
+      font-size: 3.5rem;
+      left: 0%;
+      padding-left: 9rem;
+      margin-right: 40vw;
+    }
+
+    &__music {
+      width: 38%;
+      top: 35%;
+      left: 51%;
+    }
+  }
+
+  .shows {
+    display: flex;
+
+    &__title {
+      margin-left: 9rem;
+      margin-right: 5rem;
+      margin-top: 2rem;
+    }
+    &__ticket {
+      padding-top: 4rem;
+      margin-right: 6rem;
+      flex-grow: 1;
+    }
+  }
+
+  .footer {
+    padding-left: 7.5rem;
+
+    &__title {
+      font-size: 250%;
+    }
+
+    &__media {
+      margin-left: 4rem;
+
+      & img {
+        padding-right: 2.5rem;
+      }
+    }
+
+    &__block {
+      padding-right: 10vw;
+    }
+
+    &__blockchild {
+      padding-right: 4.5rem;
+    }
+
+    &__bandsite {
+      right: 10rem;
+    }
+  }
+}
