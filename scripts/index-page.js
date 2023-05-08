@@ -26,9 +26,7 @@ formEl.addEventListener("submit", (event) => {
       <div class="comment__sole__rightblock__top-name">${name}</div>
       <div class="comment__sole__rightblock__top-date">${formattedDate}</div>
     </div>
-    <div class="comment__sole__rightblock__words">
-      ${comment}
-    </div>
+    <div class="comment__sole__rightblock__words">${comment}</div>
   </div>
 </div>`;
 
