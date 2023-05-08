@@ -262,12 +262,14 @@ a {
   }
   .shows__ticket__info-date {
     font-size: 1rem;
+    width: 10rem;
   }
   .shows__ticket__info-date div {
     font-size: 1rem;
   }
   .shows__ticket__info-venue {
     font-size: 1rem;
+    width: 9rem;
   }
   .shows__ticket__info-venue div {
     font-size: 1rem;
