@@ -251,6 +251,7 @@ a {
 }
 .comment__sole__rightblock {
   width: 100%;
+  word-break: break-word;
 }
 .comment__sole__rightblock__top {
   display: flex;
