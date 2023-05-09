@@ -47,6 +47,7 @@ axios
     console.log(error);
   });
 
+// add comment and push to api
 let formEl = document.querySelector(".form");
 
 formEl.addEventListener("submit", (event) => {
