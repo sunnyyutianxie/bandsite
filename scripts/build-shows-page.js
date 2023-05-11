@@ -1,7 +1,7 @@
 //Get and push data from api
 axios
   .get(
-    "https://project-1-api.herokuapp.com/showdates?api_key=<69dd872e-c65b-4220-b615-6023d9cecd1f>"
+    "https://project-1-api.herokuapp.com/showdates?api_key=<506ee82f-f818-42e4-9e83-893bdf1af12b>"
   )
   .then((result) => {
     //sort result by date
