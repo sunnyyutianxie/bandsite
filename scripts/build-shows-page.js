@@ -28,49 +28,71 @@ axios
 
       // get location
       const location = block.location;
-      if (i == 0) {
-        //add to the html page
-        const commentHtml = `
-            <div class="shows__ticket__info">
-                <div class="shows__ticket__info-date">
-                  <span class="shows-label">DATE</span>
-                  <div>${formattedDate}</div>
-                </div>
-                <div class="shows__ticket__info-venue">
-                  <span class="shows-label">VENUE</span>
-                  <div>${venue}</div>
-                </div>
-                <div class="shows__ticket__info-location">
-                  <span class="shows-label">LOCATION</span>
-                  <div>${location}</div>
-                </div>
-                <div class="shows__ticket__info-buy">
-                  <button>BUY TICKETS</button>
-                </div>
-              </div>`;
-        commentSection.insertAdjacentHTML("beforeend", commentHtml);
-      } else {
-        //add to the html page
-        const commentHtml2 = `
-      <div class="shows__ticket__info">
-      <div class="shows__ticket__info-date">
-        <span class="shows-label hide-label">DATE</span>
-        <div>${formattedDate}</div>
-      </div>
-      <div class="shows__ticket__info-venue">
-        <span class="shows-label hide-label">VENUE</span>
-        <div>${venue}</div>
-      </div>
-      <div class="shows__ticket__info-location">
-        <span class="shows-label hide-label">LOCATION</span>
-        <div>${location}</div>
-      </div>
-      <div class="shows__ticket__info-buy hide-label-btn">
-        <button>BUY TICKETS</button>
-      </div>
-      </div>`;
-        commentSection.insertAdjacentHTML("beforeend", commentHtml2);
-      }
+
+      //add to the html page
+
+      const showsTicketDiv = document.createElement("div");
+      showsTicketDiv.classList.add("shows__ticket__info"); //<div class="shows__ticket__info">
+
+      //DATE
+      const showsTicketDateDiv = document.createElement("div");
+      showsTicketDateDiv.classList.add("shows__ticket__info-date"); //<div class="shows__ticket__info-date">
+      showsTicketDiv.appendChild(showsTicketDateDiv);
+
+      const showsLabelSpan = document.createElement("span");
+      showsLabelSpan.classList.add("shows-label"); //  <span class="shows-label"></span>
+      showsLabelSpan.textContent = `DATE`;
+      showsTicketDateDiv.appendChild(showsLabelSpan);
+
+      const showsFormattedDate = document.createElement("div");
+      showsFormattedDate.textContent = formattedDate; // <div>${formattedDate}</div>
+      showsTicketDateDiv.appendChild(showsFormattedDate);
+
+      //VENUE:
+      const showsTicketVenueDiv = document.createElement("div");
+      showsTicketVenueDiv.classList.add("shows__ticket__info-venue");
+      showsTicketDiv.appendChild(showsTicketVenueDiv);
+
+      const showsLabelSpanTwo = document.createElement("span");
+      showsLabelSpanTwo.classList.add("shows-label");
+      showsLabelSpanTwo.textContent = `VENUE`;
+      showsTicketVenueDiv.appendChild(showsLabelSpanTwo);
+
+      const showsVenue = document.createElement("div");
+      showsVenue.textContent = venue;
+      showsTicketVenueDiv.appendChild(showsVenue);
+
+      //LOCATION:
+      const showsTicketLocationDiv = document.createElement("div");
+      showsTicketLocationDiv.classList.add("shows__ticket__info-location");
+      showsTicketDiv.appendChild(showsTicketLocationDiv);
+
+      const showsLabelSpanThird = document.createElement("span");
+      showsLabelSpanThird.classList.add("shows-label");
+      showsLabelSpanThird.textContent = `LOCATION`;
+      showsTicketLocationDiv.appendChild(showsLabelSpanThird);
+
+      const showsLocation = document.createElement("div");
+      showsLocation.textContent = location;
+      showsTicketLocationDiv.appendChild(showsLocation);
+
+      //BUTTON:
+      const showsButton = document.createElement("div");
+      showsButton.classList.add("shows__ticket__info-buy");
+      showsTicketDiv.appendChild(showsButton);
+
+      const showsBuy = document.createElement("button");
+      showsBuy.textContent = "BUY TICKETS";
+      showsButton.appendChild(showsBuy);
+
+      commentSection.appendChild(showsTicketDiv);
+    }
+
+    const showsLabel = document.querySelectorAll(".shows-label");
+
+    //to hide label except first line
+    for (let i = 3; i < showsLabel.length; i++) {
+      showsLabel[i].classList.add("hide-label");
     }
   })
   .catch((error) => {
