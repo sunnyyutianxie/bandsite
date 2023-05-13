@@ -85,6 +85,7 @@ a {
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: brightness(65%);
 }
 .hero__word {
   position: absolute;
@@ -93,6 +94,7 @@ a {
   color: white;
   font-size: 3rem;
   font-family: "Avenir__Demi";
+  z-index: 999;
 }
 
 .musician {

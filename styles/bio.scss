@@ -120,6 +120,7 @@ a {
     max-height: 23rem;
     overflow: hidden;
     object-fit: cover;
+    filter: brightness(65%);
   }
 
   &__word {
@@ -129,6 +130,7 @@ a {
     color: white;
     font-size: 3rem;
     font-family: "Avenir__Demi";
+    z-index: 999;
   }
 }
 
