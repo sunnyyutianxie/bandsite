@@ -183,7 +183,7 @@ a {
   flex-direction: column;
   flex-grow: 1;
 }
-.conversation__right__input {
+.conversation__right-input {
   font-family: "Avenir__Regular";
   border: 1.5px #e1e1e1 solid;
   border-radius: 0.4rem;
@@ -191,21 +191,21 @@ a {
   margin-bottom: 2.2rem;
   height: 4rem;
 }
-.conversation__right__input::-moz-placeholder {
+.conversation__right-input::-moz-placeholder {
   color: #323232;
   font-size: 1.5rem;
 }
-.conversation__right__input::placeholder {
+.conversation__right-input::placeholder {
   color: #323232;
   font-size: 1.5rem;
 }
-.conversation__right__label {
+.conversation__right-label {
   font-family: "Avenir__Demi";
   font-size: 1.2rem;
   color: #afafaf;
   padding-bottom: 0.8rem;
 }
-.conversation__right__textarea {
+.conversation__right-textarea {
   font-family: "Avenir__Regular";
   border: 1.5px #e1e1e1 solid;
   border-radius: 0.4rem;
@@ -213,15 +213,15 @@ a {
   height: 11rem;
   margin-bottom: 2rem;
 }
-.conversation__right__textarea::-moz-placeholder {
+.conversation__right-textarea::-moz-placeholder {
   color: #323232;
   font-size: 1.5rem;
 }
-.conversation__right__textarea::placeholder {
+.conversation__right-textarea::placeholder {
   color: #323232;
   font-size: 1.5rem;
 }
-.conversation__right__btn {
+.conversation__right-btn {
   width: 100%;
   background-color: #323232;
   color: white;

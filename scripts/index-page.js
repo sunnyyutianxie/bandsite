@@ -91,8 +91,8 @@ formEl.addEventListener("submit", (event) => {
       }
     )
     .then((result) => {
-      document.querySelector(".conversation__right__input").value = "";
-      document.querySelector(".conversation__right__textarea").value = "";
+      document.querySelector(".conversation__right-input").value = "";
+      document.querySelector(".conversation__right-textarea").value = "";
       getComments();
 
       console.log(result);

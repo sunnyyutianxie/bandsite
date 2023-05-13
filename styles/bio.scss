@@ -232,7 +232,7 @@ a {
     flex-direction: column;
     flex-grow: 1;
 
-    &__input {
+    &-input {
       font-family: "Avenir__Regular";
       border: 1.5px #e1e1e1 solid;
       border-radius: 0.4rem;
@@ -246,14 +246,14 @@ a {
       }
     }
 
-    &__label {
+    &-label {
       font-family: "Avenir__Demi";
       font-size: 1.2rem;
       color: #afafaf;
       padding-bottom: 0.8rem;
     }
 
-    &__textarea {
+    &-textarea {
       font-family: "Avenir__Regular";
       border: 1.5px #e1e1e1 solid;
       border-radius: 0.4rem;
@@ -267,7 +267,7 @@ a {
       }
     }
 
-    &__btn {
+    &-btn {
       width: 100%;
       background-color: #323232;
       color: white;
